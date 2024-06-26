@@ -1,6 +1,7 @@
 <script>
     import {fade} from "svelte/transition";
     import {onMount} from "svelte";
+    import {base} from "$app/paths";
 
     const duration = 2000
     const me = "John Pridmore";
@@ -26,9 +27,9 @@
         </div>
         <div class="menu-bar flexed-row-center" transition:fade={{delay:1300, duration: 3000}}>
             <p>Scroll To:</p>
-            <a href="/">About</a>
-            <a href="#work">Work</a>
-            <a href="#contact">Contact</a>
+            <a href="{base}/">About</a>
+            <a href="{base}/#work">Work</a>
+            <a href="{base}/#contact">Contact</a>
         </div>
     {/if}
 </div>

@@ -15,7 +15,7 @@ const config = {
 			pages: 'build',
 			assets: 'build',
 			paths: {
-				base: process.env.NODE_ENV === 'production' ? '/' : 'build',
+				base: process.env.NODE_ENV === 'production' ? '/v2' : 'build',
 			}
 		})
 	}
