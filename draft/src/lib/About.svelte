@@ -21,8 +21,8 @@
             <div transition:fade={{delay: 2300, duration}} class="after-effect"></div>
         </div>
         <div transition:fade={{duration}} class="body-text flexed-col-center">
-            <h1 tranisition:fade={{duration}}>Hi, I'm <span class="highlighted-text">{me}</span></h1>
-            <h2 tranisition:fade={{delay: duration, duration}}>A Software Engineer, located in Chicago, IL</h2>
+            <h1 transition:fade={{duration}}>Hi, I'm <span class="highlighted-text">{me}</span></h1>
+            <h2 transition:fade={{delay: duration, duration}}>A Software Engineer, located in Chicago, IL</h2>
 
         </div>
         <div class="menu-bar flexed-row-center" transition:fade={{delay:1300, duration: 3000}}>
