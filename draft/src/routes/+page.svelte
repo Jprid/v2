@@ -5,49 +5,8 @@
     import LinedHeader from "$lib/LinedHeader.svelte";
     import {fade} from "svelte/transition";
 
-    type Content = { title: string, content: string[], name: string, startStop: string[] };
-    type HeroContent = { pic_ref: string, content: string[], subHeader: string };
     $: selectedTab = 0;
-    let loremIpsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et" +
-        "dolore magna aliqua." + "Nulla malesuada pellentesque elit eget gravida cum sociis natoque. Faucibus nisl tincidunt eget nullam. Pellentesque adipiscing commodo elit at imperdiet dui accumsan. Adipiscing elit pellentesque habitant morbi tristique senectus et. Lacus suspendisse faucibus interdum posuere lorem ipsum. Augue neque gravida in fermentum et sollicitudin ac orci phasellus. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque. Sit amet mauris commodo quis imperdiet massa. Integer quis auctor elit sed vulputate mi sit amet. Morbi tincidunt ornare massa eget. Rutrum tellus pellentesque eu tincidunt tortor." + "Scelerisque fermentum dui faucibus in ornare quam viverra orci sagittis. Libero nunc consequat interdum varius sit amet mattis vulputate enim. Arcu vitae elementum curabitur vitae nunc sed velit dignissim. Dolor morbi non arcu risus quis varius."
-        + "Et odio pellentesque diam volutpat commodo sed.";
-    const me = "John Pridmore";
 
-    export let halfIpsum = loremIpsum.slice(0, loremIpsum.length / 4);
-    export let headerList: Array<Content> = [
-        {
-            title: "Software Engineer",
-            content: [
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et",
-                "dolore magna aliqua.", "Nulla malesuada pellentesque elit eget gravida cum sociis natoque. Faucibus nisl tincidunt eget nullam. Pellentesque adipiscing commodo elit at imperdiet dui accumsan. Adipiscing elit pellentesque habitant morbi tristique senectus et. Lacus suspendisse faucibus interdum posuere lorem ipsum. Augue neque gravida in fermentum et sollicitudin ac orci phasellus. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque. Sit amet mauris commodo quis imperdiet massa. Integer quis auctor elit sed vulputate mi sit amet. Morbi tincidunt ornare massa eget. Rutrum tellus pellentesque eu tincidunt tortor.", "Scelerisque fermentum dui faucibus in ornare quam viverra orci sagittis. Libero nunc consequat interdum varius sit amet mattis vulputate enim. Arcu vitae elementum curabitur vitae nunc sed velit dignissim. Dolor morbi non arcu risus quis varius.", "Et odio pellentesque diam volutpat commodo sed."],
-            name: "Current",
-            startStop: ["September 2023", "Present"]
-        },
-        {
-            name: "Galileo",
-            content: [
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et",
-                "dolore magna aliqua.", "Nulla malesuada pellentesque elit eget gravida cum sociis natoque. Faucibus nisl tincidunt eget nullam. Pellentesque adipiscing commodo elit at imperdiet dui accumsan. Adipiscing elit pellentesque habitant morbi tristique senectus et. Lacus suspendisse faucibus interdum posuere lorem ipsum. Augue neque gravida in fermentum et sollicitudin ac orci phasellus. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque. Sit amet mauris commodo quis imperdiet massa. Integer quis auctor elit sed vulputate mi sit amet. Morbi tincidunt ornare massa eget. Rutrum tellus pellentesque eu tincidunt tortor.", "Scelerisque fermentum dui faucibus in ornare quam viverra orci sagittis. Libero nunc consequat interdum varius sit amet mattis vulputate enim. Arcu vitae elementum curabitur vitae nunc sed velit dignissim. Dolor morbi non arcu risus quis varius.", "Et odio pellentesque diam volutpat commodo sed."],
-            title: "Executive Grimace",
-            startStop: ["October 2021", "September 2023"]
-        },
-        {
-            title: "Software Dongler",
-            content: [
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et",
-                "dolore magna aliqua.", "Nulla malesuada pellentesque elit eget gravida cum sociis natoque. Faucibus nisl tincidunt eget nullam. Pellentesque adipiscing commodo elit at imperdiet dui accumsan. Adipiscing elit pellentesque habitant morbi tristique senectus et. Lacus suspendisse faucibus interdum posuere lorem ipsum. Augue neque gravida in fermentum et sollicitudin ac orci phasellus. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque. Sit amet mauris commodo quis imperdiet massa. Integer quis auctor elit sed vulputate mi sit amet. Morbi tincidunt ornare massa eget. Rutrum tellus pellentesque eu tincidunt tortor.", "Scelerisque fermentum dui faucibus in ornare quam viverra orci sagittis. Libero nunc consequat interdum varius sit amet mattis vulputate enim. Arcu vitae elementum curabitur vitae nunc sed velit dignissim. Dolor morbi non arcu risus quis varius.", "Et odio pellentesque diam volutpat commodo sed."],
-            name: "Relativity",
-            startStop: ["2018", "October 2021"]
-        },
-        {
-            title: "Software Dongler",
-            content: [
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et",
-                "dolore magna aliqua.", "Nulla malesuada pellentesque elit eget gravida cum sociis natoque. Faucibus nisl tincidunt eget nullam. Pellentesque adipiscing commodo elit at imperdiet dui accumsan. Adipiscing elit pellentesque habitant morbi tristique senectus et. Lacus suspendisse faucibus interdum posuere lorem ipsum. Augue neque gravida in fermentum et sollicitudin ac orci phasellus. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque. Sit amet mauris commodo quis imperdiet massa. Integer quis auctor elit sed vulputate mi sit amet. Morbi tincidunt ornare massa eget. Rutrum tellus pellentesque eu tincidunt tortor.", "Scelerisque fermentum dui faucibus in ornare quam viverra orci sagittis. Libero nunc consequat interdum varius sit amet mattis vulputate enim. Arcu vitae elementum curabitur vitae nunc sed velit dignissim. Dolor morbi non arcu risus quis varius.", "Et odio pellentesque diam volutpat commodo sed."],
-            name: "rMark Bio LLC",
-            startStop: ["2018", "October 2021"]
-        }
-    ];
     let links = [
         {link: "work", ref: "briefcase.svg", href: "#work"},
         {link: "contact", ref: "", href: "#contact"},
@@ -57,37 +16,37 @@
         {link: "Github", ref: "github.svg", href: "https://www.github.com/jprid"}
     ];
     const preferredContactMethod = "";
-    export const prerender= true;
 </script>
 <div class="main">
     <Links links={links}/>
-    <section id="about" class="entry" role="tabpanel">
+    <section class="entry" id="about" role="tabpanel">
         <About></About>
     </section>
     <section class="experience-list" id="work" role="tabpanel">
-        <div class="fs-xl flexed-row-center lato lined-header">
-            <LinedHeader text="Experience"/>
-        </div>
+        <LinedHeader text="Experience"/>
         <Switcher selectedTab={selectedTab}/>
     </section>
-    <footer id="contact" class="flexed-col-center">
-        <div class="lined-header fs-xl">
-            <LinedHeader class="lato" text="Contact"/>
-        </div>
+
+    <section class="flexed-col-center" id="contact">
+        <LinedHeader text="Contact"/>
 
         <div class="contact-card flexed-col-center">
-            <h2>The best way to get a hold of me is through <a transition:fade href={links[1]}>LinkedIn</a> or my <a>Email</a>.</h2>
+            <h2>The best way to get a hold of me is through <a href={links[4].href} transition:fade>LinkedIn</a> or my
+                <a href="{links[3].href}">Email</a>.</h2>
         </div>
         <span class="acknowledgments fs-sm">
             The design for this version of my site is heavily inspired by <a
-                href="https://v4.brittneychiang.com">Brittney Chiang's Site</a>.
-            Here's the <a href="http://www.jprid.com">previous iteration</a> of my website.
+                href="https://v4.brittanychiang.com/">Brittany Chiang's Site</a>.
+            Here's the <a href="http://www.v1.jprid.com">previous iteration</a> of my website.
 
         </span>
-    </footer>
+    </section>
 </div>
-
 <style lang="scss">
+  //section {
+  //  height: 100vh;
+  //}
+
   .main {
     display: flex;
     flex-flow: column nowrap;
@@ -99,14 +58,16 @@
   }
 
   .contact-card {
-    height: 90%;
+    //height: 90%;
+    h2 {
+      a {
+        text-decoration: none;
+        color: var(--mint);
 
-    a {
-      text-decoration: none;
-      color: var(--mint);
-      &:hover {
-        text-decoration: underline;
-        filter: brightness(150%);
+        &:hover {
+          text-decoration: underline;
+          filter: brightness(150%);
+        }
       }
     }
   }
@@ -121,8 +82,8 @@
     display: flex;
     flex-flow: column nowrap;
     background-color: var(--prussian-blue);
-    min-height: 100vh;
-
+    height: 100vh;
+    //max-height: 100vh;
 
     div {
 
@@ -138,18 +99,53 @@
 
   }
 
-  footer {
+  section#contact {
     font-family: Lato, sans-serif;
-    min-height: 100vh;
+    height: auto;
     display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
 
     a, a:visited {
-      color: white;
       padding-left: 0.25vw;
+    }
+
+    .contact-card {
+      height: 50vh;
+      width: 100%;
     }
 
     span.acknowledgments {
       justify-self: flex-end !important;
+      line-height: 1em;
+      a, a:visited {
+        color: var(--mint);
+      }
+    }
+  }
+
+  @media screen and (orientation: portrait) {
+    @media (max-height: 844px) {
+      section#contact {
+        width: 100vw;
+
+        .contact-card {
+          width: 60vw;
+          height: 70vh;
+
+          h2 {
+            font-size: 12px;
+          }
+        }
+
+        span.acknowledgments {
+          font-size: 7px;
+          width: 90vw;
+          text-align: center;
+          line-height: 1em;
+          margin-bottom: 1vh;
+        }
+      }
     }
   }
 </style>

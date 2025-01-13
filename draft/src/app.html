@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+		<link rel="icon" href="%sveltekit.assets%/ico.svg" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,6 +25,10 @@
 			transition: all 1s;
 			scroll-behavior: smooth;
 		}
+		html {
+			margin: 0;
+			padding: 0;
+		}
 		body {
 			height: 100vh;
 			width: 100%;
@@ -46,14 +50,14 @@
 			font-family: Lato, sans-serif;
 		}
 		.fs-l {
-			font-size: 20px;
+			font-size: 1.5em;
 			letter-spacing: 2.5px;
 		}
 		.fs-md {
 			font-size: 15px;
 		}
 		.fs-sm {
-			font-size: 12px;
+			font-size: 10px;
 			letter-spacing: 1.5px;
 		}
 		.shadowed-text-midnight-green {
@@ -70,7 +74,7 @@
 		}
 		.flexed-col-center {
 			display: flex;
-			flex-flow: column;
+			flex-flow: column nowrap;
 			justify-content: center;
 			align-items: center;
 		}
@@ -78,13 +82,5 @@
 			color: var(--mint);
 			letter-spacing: 0.25vw;
 		}
-
-		.lined-header {
-			display: flex;
-			flex-flow: row nowrap;
-			position: relative;
-			width: 100%;
-		}
-
 	</style>
 </html>
