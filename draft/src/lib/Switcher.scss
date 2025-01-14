@@ -119,7 +119,7 @@
     ul {
       padding: 0 10vw;
       li {
-        line-height: 1.35em;
+        line-height: 2.5em;
       }
     }
   }
@@ -135,6 +135,7 @@
         max-height: 10vh;
 
         .selected-tab {
+          border-right: none !important;
           border-bottom: 0.15em var(--blue-munsell) solid !important;
         }
 
@@ -213,19 +214,20 @@
       padding: 10vh 10vw;
 
       .header-list {
-        width: 10em !important;
+        //width: 10em !important;
         height: 10em !important;
         align-items: center;
+        align-self: center;
 
         .selected-tab {
-          border-right: 0.15em var(--blue-munsell) solid !important;
+          border-bottom: 0.15em var(--blue-munsell) solid !important;
         }
 
         .header {
           height: 5em;
 
           button:not(.selected-tab) {
-            border-right: 0.15em var(--midnight-green) solid;
+            border-bottom: 0.15em var(--midnight-green) solid;
           }
         }
       }
