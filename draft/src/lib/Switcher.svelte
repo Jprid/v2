@@ -30,7 +30,7 @@
     <div class="content" role="tabpanel">
         {#key selectedTab}
             <div class="content-header">
-                <strong in:fade={{duration: 300}}>{list[selectedTab].title}</strong>
+                <strong>{list[selectedTab].title}</strong>
                 <p class="fs-sm">From {list[selectedTab].start} to {list[selectedTab].end}</p>
             </div>
             <ul>

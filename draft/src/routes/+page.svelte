@@ -37,16 +37,12 @@
         <span class="acknowledgments fs-sm">
             The design for this version of my site is heavily inspired by <a
                 href="https://v4.brittanychiang.com/">Brittany Chiang's Site</a>.
-            Here's the <a href="http://www.v1.jprid.com">previous iteration</a> of my website.
+<!--            Here's the <a href="http://www.v1.jprid.com">previous iteration</a> of my website.-->
 
         </span>
     </section>
 </div>
 <style lang="scss">
-  //section {
-  //  height: 100vh;
-  //}
-
   .main {
     display: flex;
     flex-flow: column nowrap;
@@ -58,7 +54,6 @@
   }
 
   .contact-card {
-    //height: 90%;
     h2 {
       a {
         text-decoration: none;
@@ -83,7 +78,6 @@
     flex-flow: column nowrap;
     background-color: var(--prussian-blue);
     height: 100vh;
-    //max-height: 100vh;
 
     div {
 
@@ -118,6 +112,7 @@
     span.acknowledgments {
       justify-self: flex-end !important;
       line-height: 1em;
+      padding-bottom: 1em;
       a, a:visited {
         color: var(--mint);
       }

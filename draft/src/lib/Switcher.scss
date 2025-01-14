@@ -5,11 +5,12 @@
 
 .switcher {
   display: grid;
-  grid-template-areas:  "h h c c c"
-                        "h h c c c"
-                        "h h c c c";
-  grid-template-columns: 2fr 3fr;
+  grid-template-areas:  "h c c c c"
+                        "h c c c c"
+                        "h c c c c";
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   background: var(--prussian-blue);
+  padding-top: 1em;
 }
 
 .header-list {
@@ -54,14 +55,13 @@
 
   .content-header {
     font-family: Lato, sans-serif;
-
+    padding-top: 1em;
   }
 
   ul {
     li {
       padding-left: 1.5em;
       margin-bottom: 0.5em;
-      //text-shadow: 5px 5px 4px black;
       list-style: none;
       position: relative;
 
@@ -83,35 +83,29 @@
     padding: 10vh 16vw;
     display: grid;
     height: 100vh;
-    grid-template-areas:  "h h c c c"
-                        "h h c c c"
-                        "h h c c c";
   }
   .header-list {
-    grid-area: h;
     width: 10em;
 
     .header {
       height: 10em;
-      //padding: 1vw 1vh;
       letter-spacing: 0.33em;
     }
 
     .selected-tab {
       border-right: 0.15em var(--blue-munsell) solid !important;
-
     }
   }
   .content {
-    grid-area: c;
-    //justify-content: center;
     width: 100%;
     margin-left: 1em;
-
   }
 }
 
 @media (orientation: portrait) {
+  .switcher {
+    min-height: 50vh;
+  }
   .header-list {
     .header {
       border-right: none !important;
@@ -123,14 +117,14 @@
     }
 
     ul {
+      padding: 0 10vw;
       li {
         line-height: 1.35em;
       }
     }
   }
-  @media (max-height: 667px) {
+  @media (min-height: 667px) {
     .switcher {
-      width: 80vw;
       display: flex;
       flex-flow: column nowrap;
 
@@ -148,7 +142,6 @@
           width: 20vw;
           border-right: none !important;
           border-bottom: 0.15em color-mix(in srgb, var(--midnight-green) 90%, transparent) solid;
-
         }
       }
 
@@ -156,7 +149,6 @@
         width: 90vw;
         align-self: center;
         height: 100%;
-
 
         .content-header {
           align-self: center;
@@ -182,11 +174,10 @@
       }
     }
   }
-  @media (min-height: 667px) and (max-height: 1023px) {
+  @media (min-width: 1024px) {
     .switcher {
       width: 80vw;
-      //height: 100vh;
-      display: flex;
+      display: flex !important;
       flex-flow: column nowrap;
       align-self: center;
       padding: 1.5vh 1.5vw;
@@ -209,6 +200,7 @@
         ul {
           overflow-y: visible;
         }
+
         .content-header {
           padding: 1.5vh 1.5vw;
         }
@@ -246,12 +238,7 @@
           padding: 1vh 1vw;
           margin-bottom: 10vh;
         }
-
-        .content-header {
-
-        }
       }
     }
-
   }
 }
