@@ -123,7 +123,7 @@
     @media (max-height: 844px) {
       section#contact {
         width: 100vw;
-
+        margin-top: 100vh;
         .contact-card {
           width: 60vw;
           height: 70vh;
