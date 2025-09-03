@@ -51,6 +51,7 @@
     height: 100%;
     width: 100%;
     line-height: 2em;
+    justify-content: space-evenly;
   }
 
   .contact-card {
@@ -77,7 +78,6 @@
     display: flex;
     flex-flow: column nowrap;
     background-color: var(--prussian-blue);
-    height: 100vh;
 
     div {
 
@@ -123,7 +123,7 @@
     @media (max-height: 844px) {
       section#contact {
         width: 100vw;
-        margin-top: 100vh;
+        height: 100vh;
         .contact-card {
           width: 60vw;
           height: 70vh;

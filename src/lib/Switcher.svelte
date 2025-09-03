@@ -35,7 +35,7 @@
             </div>
             <ul>
                 {#each list[selectedTab].experience_content ?? [] as p, i}
-                    <li class="fs-sm shadowed-text-prussian-blue">{p}</li>
+                    <li class="fs-sm">{p}</li>
                 {/each}
             </ul>
         {/key}

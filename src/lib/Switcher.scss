@@ -115,14 +115,14 @@
     .content-header {
       text-align: center;
     }
-
     ul {
-      padding: 0 10vw;
+      padding-left: 5vw;
       li {
         line-height: 2.5em;
       }
     }
   }
+
   @media (min-height: 667px) {
     .switcher {
       display: flex;
