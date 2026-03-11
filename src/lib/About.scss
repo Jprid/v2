@@ -18,6 +18,8 @@
     box-shadow: -0.3em 0.2em 0px var(--mint);
     height: 2.5em;
 
+    transition: background 0.3s, border-color 0.3s, box-shadow 0.3s, letter-spacing 0.3s;
+
     &:hover {
       background: var(--mint);
       border: 2px solid var(--mint);
@@ -69,8 +71,11 @@
 
 .body-text {
   grid-area: b;
-  .highlighted-text:hover {
-    text-shadow: 0.1em 0.1em 1em var(--blue-munsell);
+  .highlighted-text {
+    transition: text-shadow 0.3s;
+    &:hover {
+      text-shadow: 0.1em 0.1em 1em var(--blue-munsell);
+    }
   }
 }
 

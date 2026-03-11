@@ -59,6 +59,7 @@
       a {
         text-decoration: none;
         color: var(--mint);
+        transition: filter 0.3s;
 
         &:hover {
           text-decoration: underline;

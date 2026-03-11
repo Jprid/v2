@@ -29,11 +29,12 @@
 
     svg {
       color: white;
+      transition: color 0.3s;
     }
 
     svg:hover, svg:focus {
       color: var(--mint);
-      transition: 0s;
+      transition: color 0s;
     }
 
     li {

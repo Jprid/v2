@@ -31,6 +31,7 @@
     flex-flow: column nowrap;
     justify-content: center;
     border-right: 0.15em color-mix(in srgb, var(--midnight-green) 90%, transparent) solid;
+    transition: color 0.3s;
 
     button {
       background-color: inherit;
