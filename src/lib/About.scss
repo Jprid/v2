@@ -197,3 +197,15 @@
     }
   }
 }
+
+/* Fade-in animations — replaces Svelte transition:fade so content is SSR-rendered */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.pic > img          { animation: fadeIn 1s ease 300ms   both; }
+.after-effect       { animation: fadeIn 1s ease 2300ms  both; }
+.body-text          { animation: fadeIn 1s ease         both; }
+.body-text h2       { animation: fadeIn 1s ease 2000ms  both; }
+.menu-bar           { animation: fadeIn 2s ease 1300ms  both; }
